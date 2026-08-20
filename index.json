@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Manga Online Green",
+    "pkg": "eu.kanade.tachiyomi.extension.pt.mangaonlinegreen",
+    "apk": "tachiyomi-pt.mangaonlinegreen-v1.6.1.apk",
+    "lang": "pt-BR",
+    "code": 1,
+    "version": "1.6.1",
+    "nsfw": 1,
+    "sources": [
+      {
+        "name": "Manga Online Green",
+        "lang": "pt-BR",
+        "id": "1894377899418900536",
+        "baseUrl": "https://mangaonline.green",
+        "versionId": 1
+      }
+    ]
+  }
+]
