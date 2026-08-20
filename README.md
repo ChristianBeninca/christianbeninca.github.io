@@ -1,4 +1,4 @@
-# christianbeninca.github.io
+﻿# christianbeninca.github.io
 
 Hub de projetos no GitHub Pages. A raiz lista os projetos; cada subpasta/repo tem seu próprio conteúdo.
 
@@ -20,9 +20,10 @@ Hub de projetos no GitHub Pages. A raiz lista os projetos; cada subpasta/repo te
 ## Instalar no Mihon
 
 1. **Settings → Browse → Extension repos → Add repository**
-2. URL: `https://christianbeninca.github.io/mihon`
-3. Aba **Extensions** → filtrar `pt-BR` → instalar **Manga Online Green**
-4. A fonte é marcada com conteúdo +18 misto: ative "Show sources with adult content" em Settings → Browse se não aparecer.
+2. Nome: `Christian Beninca` (ou o que preferir)
+3. URL: `https://christianbeninca.github.io/mihon/index.min.json`
+4. Aba **Extensions** → filtrar `pt-BR` → instalar **Manga Online Green**
+5. A fonte é marcada com conteúdo +18 misto: ative "Show sources with adult content" em Settings → Browse se não aparecer.
 
 ## Extensões
 
