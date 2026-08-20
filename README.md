@@ -33,10 +33,15 @@ Hub de projetos no GitHub Pages. A raiz lista os projetos; cada subpasta/repo te
 
 ## Estrutura (`mihon/`)
 
-- `index.min.json` / `index.json` — índice consumido pelo app
+- `index.min.json` / `index.json` — índice no **formato Store novo do Mihon** (objeto único com
+  `name`, `badgeLabel`, `signingKey`, `contact`, `extensionList`), não mais o array legado
 - `apk/` — APKs assinados (debug key local)
 - `icon/` — ícones por package name
 - `index.html` — página humana do repositório
+
+O `signingKey` é o fingerprint SHA-256 (hex minúsculo) do certificado que assina os APKs —
+o Mihon usa para confiar automaticamente nas instalações. Se mudar a chave de assinatura,
+regenerar com: `apksigner verify --print-certs <apk>` e atualizar aqui.
 
 ## Build da extensão
 
