@@ -3,28 +3,73 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Christian Beninca — Extensões Mihon</title>
+<title>Christian Beninca — Projetos</title>
 <style>
-  body { font-family: system-ui, sans-serif; background: #101418; color: #e6e9ec; max-width: 720px; margin: 3rem auto; padding: 0 1rem; }
-  h1 { color: #4ade80; }
-  .card { background: #1a2027; border: 1px solid #2a3340; border-radius: 12px; padding: 1.25rem; margin: 1rem 0; display: flex; gap: 1rem; align-items: center; }
-  .card img { width: 64px; height: 64px; border-radius: 12px; }
-  .meta { color: #8b98a5; font-size: .9rem; }
-  code { background: #0b0e12; padding: .15rem .4rem; border-radius: 6px; font-size: .85em; }
+  :root { --bg: #0d1117; --card: #161c26; --border: #263041; --accent: #4ade80; --muted: #8b98a5; }
+  * { box-sizing: border-box; }
+  body { font-family: system-ui, sans-serif; background: var(--bg); color: #e6e9ec; max-width: 860px; margin: 0 auto; padding: 3rem 1.25rem; }
+  header { margin-bottom: 2.5rem; }
+  h1 { margin: 0 0 .35rem; font-size: 1.9rem; letter-spacing: -.02em; }
+  h1 span { color: var(--accent); }
+  header p { color: var(--muted); margin: 0; }
+  section { margin-bottom: 2.5rem; }
+  h2 { font-size: .85rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: .5rem; }
+  a { color: inherit; text-decoration: none; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.15rem 1.25rem; transition: transform .12s ease, border-color .12s ease; display: flex; flex-direction: column; gap: .3rem; }
+  .card:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .card strong { font-size: 1.05rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .88rem; flex-grow: 1; }
+  .tag { align-self: flex-start; font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); background: rgba(74, 222, 128, .1); border: 1px solid rgba(74, 222, 128, .25); padding: .15rem .5rem; border-radius: 99px; }
+  footer { color: var(--muted); font-size: .82rem; border-top: 1px solid var(--border); padding-top: 1.25rem; }
+  footer code { background: #0b0e12; padding: .1rem .35rem; border-radius: 6px; }
 </style>
 </head>
 <body>
-<h1>Extensões Mihon</h1>
-<p>Repositório de extensões para <a href="https://mihon.app" style="color:#4ade80">Mihon</a>.</p>
-<p class="meta">Adicione no app: Settings → Browse → Extension repos → <code>https://christianbeninca.github.io</code></p>
+<header>
+  <h1>Christian <span>Beninca</span></h1>
+  <p>Hub de projetos hospedados no GitHub Pages.</p>
+</header>
 
-<div class="card">
-  <img src="icon/eu.kanade.tachiyomi.extension.pt.mangaonlinegreen.png" alt="Manga Online Green">
-  <div>
-    <strong>Manga Online Green</strong> <span class="meta">pt-BR · v1.6.1</span>
-    <p class="meta">Fonte: <a href="https://mangaonline.green" style="color:#4ade80">mangaonline.green</a> · contém conteúdo +18 (marcada como mista)</p>
-    <a href="apk/tachiyomi-pt.mangaonlinegreen-v1.6.1.apk" style="color:#4ade80">Baixar APK</a>
+<section>
+  <h2>Projetos Web</h2>
+  <div class="grid">
+    <a class="card" href="CustomDashboard/">
+      <span class="tag">Web App</span>
+      <strong>Dashboard Pessoal</strong>
+      <p>Painel personalizado com atalhos e informações do dia a dia.</p>
+    </a>
+    <a class="card" href="NLW20-GameCoachAi/">
+      <span class="tag">IA</span>
+      <strong>NLW eSports AI Agent</strong>
+      <p>Agente de IA para coaching de eSports, feito na NLW da Rocketseat.</p>
+    </a>
+    <a class="card" href="RetroSpaceShooter/">
+      <span class="tag">Jogo</span>
+      <strong>SNES Space Shooter</strong>
+      <p>Jogo de nave estilo retrô 16-bits direto no navegador.</p>
+    </a>
+    <a class="card" href="https://thegamerspub.github.io/MegamanArenaTribute-Website/">
+      <span class="tag">Fan Site</span>
+      <strong>Megaman Arena Tribute</strong>
+      <p>Tributo à série Mega Man, em parceria com o The Gamer's Pub.</p>
+    </a>
   </div>
-</div>
+</section>
+
+<section>
+  <h2>Ferramentas</h2>
+  <div class="grid">
+    <a class="card" href="mihon/">
+      <span class="tag">Mihon</span>
+      <strong>Repo de Extensões Mihon</strong>
+      <p>Extensões próprias para o leitor Mihon — atualmente com a fonte Manga Online Green (pt-BR).</p>
+    </a>
+  </div>
+</section>
+
+<footer>
+  Hospedado gratuitamente no GitHub Pages · adicione o repo de extensões no Mihon com <code>https://christianbeninca.github.io/mihon</code>
+</footer>
 </body>
 </html>

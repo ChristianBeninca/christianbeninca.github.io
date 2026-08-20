@@ -1,11 +1,26 @@
 # christianbeninca.github.io
 
-Repositório de extensões [Mihon](https://mihon.app) hospedado via GitHub Pages.
+Hub de projetos no GitHub Pages. A raiz lista os projetos; cada subpasta/repo tem seu próprio conteúdo.
+
+## Projetos
+
+| Projeto | URL |
+|---------|-----|
+| Hub (esta raiz) | https://christianbeninca.github.io/ |
+| Repo de extensões Mihon | https://christianbeninca.github.io/mihon/ |
+| Dashboard Pessoal | https://christianbeninca.github.io/CustomDashboard/ |
+| NLW eSports AI Agent | https://christianbeninca.github.io/NLW20-GameCoachAi/ |
+| SNES Space Shooter | https://christianbeninca.github.io/RetroSpaceShooter/ |
+| Megaman Arena Tribute | https://thegamerspub.github.io/MegamanArenaTribute-Website/ |
+
+---
+
+# Repo de extensões Mihon (`/mihon`)
 
 ## Instalar no Mihon
 
 1. **Settings → Browse → Extension repos → Add repository**
-2. URL: `https://christianbeninca.github.io`
+2. URL: `https://christianbeninca.github.io/mihon`
 3. Aba **Extensions** → filtrar `pt-BR` → instalar **Manga Online Green**
 4. A fonte é marcada com conteúdo +18 misto: ative "Show sources with adult content" em Settings → Browse se não aparecer.
 
@@ -15,7 +30,7 @@ Repositório de extensões [Mihon](https://mihon.app) hospedado via GitHub Pages
 |------|-------|--------|
 | Manga Online Green | [mangaonline.green](https://mangaonline.green) | 1.6.1 (code 1) |
 
-## Estrutura
+## Estrutura (`mihon/`)
 
 - `index.min.json` / `index.json` — índice consumido pelo app
 - `apk/` — APKs assinados (debug key local)
@@ -32,5 +47,5 @@ $env:JAVA_HOME = "C:\Program Files\Java\jdk-25"
 # APK em src/pt/mangaonlinegreen/build/outputs/apk/debug/
 ```
 
-Ao atualizar: incrementar `versionCode` no `build.gradle.kts`, rebuildar, copiar o APK para `apk/`,
+Ao atualizar: incrementar `versionCode` no `build.gradle.kts`, rebuildar, copiar o APK para `mihon/apk/`,
 renomear entrada no `index.json`/`index.min.json` (code, version, apk) e commitar.
