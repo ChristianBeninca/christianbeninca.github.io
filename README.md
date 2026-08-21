@@ -1,4 +1,4 @@
-﻿# christianbeninca.github.io
+# christianbeninca.github.io
 
 Hub de projetos no GitHub Pages. A raiz lista os projetos; cada subpasta/repo tem seu próprio conteúdo.
 
@@ -21,7 +21,7 @@ Hub de projetos no GitHub Pages. A raiz lista os projetos; cada subpasta/repo te
 
 1. **Settings → Browse → Extension repos → Add repository**
 2. Nome: `Christian Beninca` (ou o que preferir)
-3. URL: `https://christianbeninca.github.io/mihon/index.min.json`
+3. URL: `https://christianbeninca.github.io/mihon/index.pb` (formato protobuf canônico; index.min.json em JSON também funciona)
 4. Aba **Extensions** → filtrar `pt-BR` → instalar **Manga Online Green**
 5. A fonte é marcada com conteúdo +18 misto: ative "Show sources with adult content" em Settings → Browse se não aparecer.
 
@@ -33,7 +33,8 @@ Hub de projetos no GitHub Pages. A raiz lista os projetos; cada subpasta/repo te
 
 ## Estrutura (`mihon/`)
 
-- `index.min.json` / `index.json` — índice no **formato Store novo do Mihon** (objeto único com
+- `index.pb` — índice protobuf canônico (mesmo formato do Keiyoushi)
+- `index.min.json` / `index.json` — mesmo Store em JSON (objeto único com
   `name`, `badgeLabel`, `signingKey`, `contact`, `extensionList`), não mais o array legado
 - `apk/` — APKs assinados (debug key local)
 - `icon/` — ícones por package name
