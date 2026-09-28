@@ -51,12 +51,12 @@
         "name": "MangaDash",
         "packageName": "eu.kanade.tachiyomi.extension.pt.mangadash",
         "resources": {
-          "apkUrl": "https://christianbeninca.github.io/mihon/apk/tachiyomi-pt.mangadash-v1.4.1.apk",
+          "apkUrl": "https://christianbeninca.github.io/mihon/apk/tachiyomi-pt.mangadash-v1.4.2.apk",
           "iconUrl": "https://christianbeninca.github.io/mihon/icon/eu.kanade.tachiyomi.extension.pt.mangadash.png"
         },
         "extensionLib": "1.4",
-        "versionCode": 1,
-        "versionName": "1.4.1",
+        "versionCode": 2,
+        "versionName": "1.4.2",
         "contentWarning": "CONTENT_WARNING_MIXED",
         "sources": [
           {

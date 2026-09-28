@@ -9,4 +9,4 @@ Shttps://christianbeninca.github.io/mihon/apk/tachiyomi-pt.mangalivreblog-v1.6.3
 Uhttps://christianbeninca.github.io/mihon/apk/tachiyomi-pt.mangaonlinegreen-v1.6.3.apkchttps://christianbeninca.github.io/mihon/icon/eu.kanade.tachiyomi.extension.pt.mangaonlinegreen.png"1.6(21.6.38B9¸°Û©šÕ‹¥Manga Onlinept-BR"https://mangaonline.love
 ­
 	MangaDash*eu.kanade.tachiyomi.extension.pt.mangadash®
-Nhttps://christianbeninca.github.io/mihon/apk/tachiyomi-pt.mangadash-v1.4.1.apk\https://christianbeninca.github.io/mihon/icon/eu.kanade.tachiyomi.extension.pt.mangadash.png"1.4(21.4.18B3æé›‰¯“øÅ?	MangaDashpt-BR"https://mangadash.net
+Nhttps://christianbeninca.github.io/mihon/apk/tachiyomi-pt.mangadash-v1.4.2.apk\https://christianbeninca.github.io/mihon/icon/eu.kanade.tachiyomi.extension.pt.mangadash.png"1.4(21.4.28B3æé›‰¯“øÅ?	MangaDashpt-BR"https://mangadash.net
