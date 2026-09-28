@@ -8,22 +8,42 @@
   "extensionList": {
     "extensions": [
       {
-        "name": "Manga Online Green",
+        "name": "Manga Livre Blog",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.mangalivreblog",
+        "resources": {
+          "apkUrl": "https://christianbeninca.github.io/mihon/apk/tachiyomi-pt.mangalivreblog-v1.6.3.apk",
+          "iconUrl": "https://christianbeninca.github.io/mihon/icon/eu.kanade.tachiyomi.extension.pt.mangalivreblog.png"
+        },
+        "extensionLib": "1.6",
+        "versionCode": 3,
+        "versionName": "1.6.3",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": 588678420372440028,
+            "name": "Manga Livre Blog",
+            "language": "pt-BR",
+            "homeUrl": "https://mangalivre.blog"
+          }
+        ]
+      },
+      {
+        "name": "Manga Online",
         "packageName": "eu.kanade.tachiyomi.extension.pt.mangaonlinegreen",
         "resources": {
-          "apkUrl": "https://christianbeninca.github.io/mihon/apk/tachiyomi-pt.mangaonlinegreen-v1.6.1.apk",
+          "apkUrl": "https://christianbeninca.github.io/mihon/apk/tachiyomi-pt.mangaonlinegreen-v1.6.3.apk",
           "iconUrl": "https://christianbeninca.github.io/mihon/icon/eu.kanade.tachiyomi.extension.pt.mangaonlinegreen.png"
         },
         "extensionLib": "1.6",
-        "versionCode": 1,
-        "versionName": "1.6.1",
+        "versionCode": 3,
+        "versionName": "1.6.3",
         "contentWarning": "CONTENT_WARNING_MIXED",
         "sources": [
           {
             "id": 1894377899418900536,
-            "name": "Manga Online Green",
+            "name": "Manga Online",
             "language": "pt-BR",
-            "homeUrl": "https://mangaonline.green"
+            "homeUrl": "https://mangaonline.love"
           }
         ]
       }

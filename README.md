@@ -1,6 +1,6 @@
 # christianbeninca.github.io
 
-Hub de projetos no GitHub Pages. A raiz lista os projetos; cada subpasta/repo tem seu próprio conteúdo.
+Hub de projetos no GitHub Pages. A raiz (`index.html`) indexa os projetos; cada projeto é um repositório próprio com Pages, exceto as extensões Mihon, que ficam na subpasta `mihon/` deste repositório.
 
 ## Projetos
 
@@ -22,37 +22,40 @@ Hub de projetos no GitHub Pages. A raiz lista os projetos; cada subpasta/repo te
 1. **Settings → Browse → Extension repos → Add repository**
 2. Nome: `Christian Beninca` (ou o que preferir)
 3. URL: `https://christianbeninca.github.io/mihon/index.pb` (formato protobuf canônico; index.min.json em JSON também funciona)
-4. Aba **Extensions** → filtrar `pt-BR` → instalar **Manga Online Green**
-5. A fonte é marcada com conteúdo +18 misto: ative "Show sources with adult content" em Settings → Browse se não aparecer.
+4. Aba **Extensions** → filtrar `pt-BR` → instalar as extensões desejadas.
+5. As fontes marcadas como **+18** (Manga Online) só aparecem com "Show sources with adult content" ligado em Settings → Browse.
 
 ## Extensões
 
 | Nome | Fonte | Versão |
 |------|-------|--------|
-| Manga Online Green | [mangaonline.green](https://mangaonline.green) | 1.6.1 (code 1) |
+| Manga Online | [mangaonline.love](https://mangaonline.love) | 1.6.3 (code 3) |
+| Manga Livre Blog | [mangalivre.blog](https://mangalivre.blog) | 1.6.3 (code 3) |
 
-## Estrutura (`mihon/`)
+## Build
 
-- `index.pb` — índice protobuf canônico (mesmo formato do Keiyoushi)
-- `index.min.json` / `index.json` — mesmo Store em JSON (objeto único com
-  `name`, `badgeLabel`, `signingKey`, `contact`, `extensionList`), não mais o array legado
-- `apk/` — APKs assinados (debug key local)
-- `icon/` — ícones por package name
-- `index.html` — página humana do repositório
-
-O `signingKey` é o fingerprint SHA-256 (hex minúsculo) do certificado que assina os APKs —
-o Mihon usa para confiar automaticamente nas instalações. Se mudar a chave de assinatura,
-regenerar com: `apksigner verify --print-certs <apk>` e atualizar aqui.
-
-## Build da extensão
-
-Código-fonte em `.ai-work/mihon/extensions-source/src/pt/mangaonlinegreen/` (clone keiyoushi).
+O código vive no clone do keiyoushi em `.ai-work/mihon/extensions-source/src/pt/<extensao>/`.
+As extensões deste repo estão registradas no `settings.gradle.kts` desse clone.
 
 ```powershell
+cd ..\.ai-work\mihon\extensions-source
 $env:JAVA_HOME = "C:\Program Files\Java\jdk-25"
-.\gradlew.bat :src:pt:mangaonlinegreen:assembleDebug
-# APK em src/pt/mangaonlinegreen/build/outputs/apk/debug/
+.\gradlew.bat :src:pt:mangaonlinegreen:assembleDebug   # Manga Online
+.\gradlew.bat :src:pt:mangalivreblog:assembleDebug    # Manga Livre Blog
+# APKs em src/pt/<modulo>/build/outputs/apk/debug/
 ```
 
-Ao atualizar: incrementar `versionCode` no `build.gradle.kts`, rebuildar, copiar o APK para `mihon/apk/`,
-renomear entrada no `index.json`/`index.min.json` (code, version, apk) e commitar.
+Para publicar uma versão:
+
+1. Aumentar o `versionCode` no `build.gradle.kts` do módulo.
+2. Compilar e copiar o APK para `mihon/apk/` (o nome já traz a versão) e o ícone de
+   `res/mipmap-xxxhdpi/ic_launcher.png` para `mihon/icon/<packageName>.png`.
+3. Atualizar `name`, `versionCode`, `versionName` e as URLs em `mihon/index.json`, copiar
+   para `mihon/index.min.json` e regerar o protobuf:
+   `python tools/gen_index_pb.py mihon/index.json mihon/index.pb`
+   (o `id` da fonte é o gerado pelo KSP em `build/generated/ksp/.../ExtensionGenerated.kt`).
+4. `python tools/pbtools.py mihon/index.pb` para conferir.
+
+O `signingKey` no `index.json` é o fingerprint SHA-256 do certificado que assina os APKs — o
+Mihon usa isso para confiar nas atualizações. Conferir com
+`apksigner verify --print-certs mihon\apk\<arquivo>.apk` (a chave de debug local já bate).
