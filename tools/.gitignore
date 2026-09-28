@@ -1,0 +1,6 @@
+# Esta pasta e local de trabalho e NAO faz parte do site publicado.
+# Os scripts (gen_index_pb.py, pbtools.py) sao auxiliares de build/publicacao que
+# vivem no workspace, fora do repo publico. Este .gitignore existe para que um
+# `git add .` acidental nao publique essa pasta no GitHub Pages.
+*
+!.gitignore

@@ -22,7 +22,7 @@ Hub de projetos no GitHub Pages. A raiz (`index.html`) indexa os projetos; cada 
 1. **Settings → Browse → Extension repos → Add repository**
 2. Nome: `Christian Beninca` (ou o que preferir)
 3. URL: `https://christianbeninca.github.io/mihon/index.pb` (formato protobuf canônico; index.min.json em JSON também funciona)
-4. Aba **Extensions** → filtrar `pt-BR` → instalar as extensões desejadas.
+4. Aba **Extensões** (*Extensions*, conforme o idioma do app) → filtrar `pt-BR` → instalar as extensões desejadas.
 5. As fontes marcadas como **+18** (Manga Online) só aparecem com "Show sources with adult content" ligado em Settings → Browse.
 
 ## Extensões
